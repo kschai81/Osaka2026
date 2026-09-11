@@ -1,16 +1,25 @@
-# Osaka 2026 — Day 1 (10/14)
+# Osaka 2026 (10/14–10/18)
 
-간사이공항 착륙부터 취침까지, 19:20 호텔 체크인에서 갈라지는 저녁 세 갈래 일정 페이지.
+6인 가족 오사카 여행 일정 페이지. 정적 HTML, 빌드 없음.
 
-- `index.html` — 단일 파일 정적 페이지 (외부 의존성: Google Fonts만)
-- Netlify 연결 시 빌드 명령 없음, publish directory `.`
+## 구조
 
-## 배포
+```
+index.html    전체 일정 + 고정 정보(항공·숙소·터미널)
+day1.html     10/14 (수) 도착 · 저녁 세 갈래
+day2.html     10/15 (목) USJ
+day3.html     10/16 (금)
+day4.html     10/17 (토)
+day5.html     10/18 (일) 귀국
+assets/base.css      공통 스타일 (전 페이지 공유)
+assets/kid-boy.png   헤더 아바타
+assets/kid-girl.png  헤더 아바타
+netlify.toml  publish=".", 빌드 명령 없음
+```
 
-Netlify → Add new site → Import from Git → 이 저장소 선택 → Build command 비움 / Publish directory `.`
-이후 이 저장소에 push하면 자동 재배포.
+## 수정
 
-## 투표 기능
+날짜 하나만 바꿀 때는 그 `dayN.html` 하나만 교체하면 된다.
+디자인을 바꿀 때는 `assets/base.css` 하나만 교체하면 전 페이지에 반영된다.
 
-정적 호스팅이라 서버가 없으므로 투표는 각자 브라우저(localStorage)에만 저장된다.
-집계는 페이지의 "내 선택 복사" 버튼으로 모은다.
+GitHub → Add file → Upload files → 같은 이름으로 덮어쓰기 → Commit → Netlify 자동 재배포.
