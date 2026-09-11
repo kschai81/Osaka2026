@@ -110,7 +110,7 @@
     <div class="axis">
       <div class="ticks">
         <div></div>
-        <div class="ticks-bar" id="ticks"></div>
+        <div class="ticks-bar" data-from="17" data-to="24"></div>
       </div>
 
       <div class="annorow">
@@ -385,34 +385,8 @@
 </footer>
 </div>
 
-<script>
-/* time axis ticks: 18:00–24:00 */
-(function(){
-  const t=document.getElementById('ticks');
-  for(let h=17;h<=24;h++){
-    const pct=(h-17)/7*100;
-    const s=document.createElement('span');
-    s.textContent=(h===24?'24':h)+':00';
-    s.style.left=pct+'%';
-    if(h===17)s.style.transform='translateX(0)';
-    if(h===24)s.style.transform='translateX(-100%)';
-    t.appendChild(s);
-    const i=document.createElement('i');i.style.left=pct+'%';t.appendChild(i);
-  }
-})();
-
-document.querySelectorAll('.sbtn button').forEach(b=>{
-  b.addEventListener('click',()=>{
-    const q=encodeURIComponent(b.dataset.q);
-    const u=(b.dataset.e==='g')
-      ? 'https://www.google.com/search?q='+q
-      : 'https://search.naver.com/search.naver?query='+q;
-    window.open(u,'_blank','noopener,noreferrer,width=540,height=800');
-  });
-});
 
 
-</script>
-
+<script src="assets/app.js" defer></script>
 </body>
 </html>

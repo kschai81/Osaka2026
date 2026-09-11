@@ -355,3 +355,5 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--line);font-si
   .daynav a span{display:none;}
   .daynav a{padding:7px 10px;}
 }
+
+.seg.meet{background:var(--bath);}
