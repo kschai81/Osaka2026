@@ -357,3 +357,24 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--line);font-si
 }
 
 .seg.meet{background:var(--bath);}
+
+/* confirmed reservation callout */
+.booked{
+  margin-top:18px;background:var(--bath-soft);border:1px solid var(--bath);
+  border-left:4px solid var(--bath);border-radius:4px;padding:16px 18px;
+}
+.booked .t{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--bath);font-weight:700;}
+.booked h3{margin:5px 0 0;font-size:19px;font-weight:650;color:var(--ink);word-break:keep-all;}
+.booked .meta{display:flex;flex-wrap:wrap;gap:0;margin:12px 0 0;
+  border-top:1px solid var(--line);border-left:1px solid var(--line);border-radius:3px;overflow:hidden;}
+.booked .meta > div{flex:1 1 110px;padding:9px 12px;border-right:1px solid var(--line);
+  border-bottom:1px solid var(--line);background:var(--surface);}
+.booked .meta .k{font-size:10.5px;color:var(--ink-3);letter-spacing:.04em;}
+.booked .meta .v{font-family:'IBM Plex Mono',monospace;font-size:15px;font-weight:600;margin-top:2px;color:var(--ink);}
+.booked p{margin:11px 0 0;font-size:13.5px;color:var(--ink-2);line-height:1.65;word-break:keep-all;}
+.booked p b{color:var(--ink);font-weight:600;}
+.booked .cancel{display:inline-block;margin-top:12px;font-size:12.5px;padding:7px 12px;
+  border:1px solid var(--line-2);border-radius:3px;background:var(--surface);
+  color:var(--ink-2);text-decoration:none;font-weight:600;}
+.booked .cancel:hover{border-color:var(--bath);color:var(--bath);}
