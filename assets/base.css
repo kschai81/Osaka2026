@@ -378,3 +378,6 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--line);font-si
   border:1px solid var(--line-2);border-radius:3px;background:var(--surface);
   color:var(--ink-2);text-decoration:none;font-weight:600;}
 .booked .cancel:hover{border-color:var(--bath);color:var(--bath);}
+
+/* day3 두 팀 타임라인 — 좁은 화면에서는 라벨을 숨기고 범례로 읽는다 */
+@media (max-width:760px){ .lane.compact .seg{font-size:0;} }
